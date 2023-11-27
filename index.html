@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Equation of a Line Solver</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="icon" href="favicon.png">
+  <meta name="theme-color" content="#4b549b">
+</head>
+<header>
+
+  <script src="LineProgram.js"></script>
+  
+  <nav class="nav">
+    <a href="#home">MATH TOOL!</a>
+    <div class="topnav-center">
+      Equation of a Line Solving Methods:
+    </div>
+    <div class="topnav-right"> 
+      <a href="#menu-item-1">Slope and Point</a>
+      <a href="#menu-item-2">2 Points</a>
+      <a href="#menu-item-3">Process</a>
+      <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
+        <div class="menu-toggle__bar1"></div>
+        <div class="menu-toggle__bar2"></div>
+        <div class="menu-toggle__bar3"></div>
+      </a>
+    </div>
+  </nav>
+</header>
+  <h1>Equation Solver</h1>
+  <p>Enter the slope and a point on the line to find the equation of the line.
+  <br>Or enter two points on the line to find the equation of the line.
+  <br>Please enter the coordinates as integers or decimals.
+  </p>
+  <body>
+    <form name="info" onclick="EquationSolver()">
+      <div>
+        <label for="Slope">Slope:</label>
+        <input type="number" step="any" id="Slope">x
+       <h2>Point on the Line:</h2>
+        <label for="Xcor">(X Coordinate</label>
+        <input type="number" step="any" id="Xcor"  name="Xcor">,
+        <label for="Ycor">Y Coordinate</label>
+        <input type="number" step = "any" id="Ycor" name="Ycor">)
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+    <p id="answer"></p>
+    <br>
+    <br>
+    <hr>
+    <form name="info2" onclick="EquationSolver2()">
+      <div>
+        <h3>Two Points Method</h3>
+        <h2>Point 1:</h2>
+        <label for="Xcor1">(X Coordinate</label>
+        <input type="number" step="any" id="Xcor1"  name="Xcor1">,
+        <label for="Ycor1">Y Coordinate</label>
+        <input type="number" step="any" id="Ycor1" name="Ycor1">)
+        <h2>Point 2:</h2>
+        <label for="Xcor2">(X Coordinate</label>
+        <input type="number"  step="any" id="Xcor2"  name="Xcor2">,
+        <label for="Ycor2">Y Coordinate</label>
+        <input type="number" step="any" id="Ycor2" name="Ycor2">)
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+    <p id="answer2"></p>
+    <br>
+    <br>
+  </body>
+  <style>
