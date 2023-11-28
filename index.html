@@ -19,8 +19,8 @@
       Equation of a Line Solving Methods:
     </div>
     <div class="topnav-right"> 
-      <a href="#menu-item-1">Slope and Point</a>
-      <a href="#menu-item-2">2 Points</a>
+      <a href="#equation-solver1-container">Slope and Point</a>
+      <a href="#equation-solver2-container">2 Points</a>
       <a href="#menu-item-3">Process</a>
       <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
         <div class="menu-toggle__bar1"></div>
@@ -30,19 +30,20 @@
     </div>
   </nav>
 </header>
+<body>
+<div id="equation-solver1-container">
   <h1>Equation Solver</h1>
   <p>Enter the slope and a point on the line to find the equation of the line.
   <br>Or enter two points on the line to find the equation of the line.
   <br>Please enter the coordinates as integers or decimals.
   </p>
-  <body>
     <form name="info" onclick="EquationSolver()">
       <div>
         <label for="Slope">Slope:</label>
         <input type="number" step="any" id="Slope">x
        <h2>Point on the Line:</h2>
         <label for="Xcor">(X Coordinate</label>
-        <input type="number" step="any" id="Xcor"  name="Xcor">,
+        <input type="number" step= "any" id="Xcor"  name="Xcor">,
         <label for="Ycor">Y Coordinate</label>
         <input type="number" step = "any" id="Ycor" name="Ycor">)
         <input type="submit" value="Submit">
@@ -51,9 +52,10 @@
     <p id="answer"></p>
     <br>
     <br>
+</div>
     <hr>
     <form name="info2" onclick="EquationSolver2()">
-      <div>
+      <div id="equation-solver2-container">
         <h3>Two Points Method</h3>
         <h2>Point 1:</h2>
         <label for="Xcor1">(X Coordinate</label>
@@ -71,5 +73,10 @@
     <p id="answer2"></p>
     <br>
     <br>
+    <hr>
+    <footer>
+      <p>Created by: Austin.M - STEM Student, grade 11</p>
+      <p>Contact information: austinm327@stemia.ca </p>
+    </footer>
   </body>
   <style>
