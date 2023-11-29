@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
   <link rel="icon" href="favicon.png">
   <meta name="theme-color" content="#4b549b">
 </head>
@@ -21,7 +22,7 @@
     <div class="topnav-right"> 
       <a href="#equation-solver1-container">Slope and Point</a>
       <a href="#equation-solver2-container">2 Points</a>
-      <a href="#menu-item-3">Process</a>
+      <a href="#calculator-container">Graphing Calculator</a>
       <a href="javascript:void(0);" id="menu-toggle" onclick="togglemenu()">
         <div class="menu-toggle__bar1"></div>
         <div class="menu-toggle__bar2"></div>
@@ -74,9 +75,22 @@
     <br>
     <br>
     <hr>
+    <div id="calculator-container">
+       <h4>Graphing Calculator</h4>
+       <p>Use the graphing calculator to display your equations!</p>
+       <div id="calculator" style="width: 800px; height: 600px;"></div>
+    </div>
+    <br>
+    <br>
+    <hr>
+
     <footer>
       <p>Created by: Austin.M - STEM Student, grade 11</p>
       <p>Contact information: austinm327@stemia.ca </p>
     </footer>
+    <script>
+      var elt = document.getElementById('calculator');
+      var calculator = Desmos.GraphingCalculator(elt);
+    </script>
   </body>
   <style>
