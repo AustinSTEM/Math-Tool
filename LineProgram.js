@@ -15,7 +15,6 @@ function EquationSolver() {
     event.preventDefault();
 }
 function EquationSolver2() {
-    inputs();
     var Xcor1 = document.forms['info2']['Xcor1'].value;
     var Ycor1 = document.forms['info2']['Ycor1'].value;
     var Xcor2 = document.forms['info2']['Xcor2'].value;
@@ -26,10 +25,20 @@ function EquationSolver2() {
     if (Slope2 == 0){
         document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + b;
     }
-    else{ document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x + " + b;
+    else{ 
+        if (b>0){
+            document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x " + b;
+        }
+        if (b==0){    
+            document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x";
+        }
+        if (b<0){    
+            document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x - " + Math.abs(b);
+        }
     }
+    inputs();
     // alert("The equation of the parabola is: y = " + Slope + "x + " + b);
-    event.preventDefault();
+    e.preventDefault();
 
 }
 
@@ -44,8 +53,8 @@ function inputs(){
     var Slope2 = (Ycor2 - Ycor1) / (Xcor2 - Xcor1);
     var b = Ycor1 - (Slope2 * Xcor1);
     var b2 = Ycor - (Slope * Xcor);
-    if (Xcor1 == Xcor2 && Xcor1){
-        alert("The x-coordinates of the two points are the same. Please enter two different points.");
+    if (Xcor1 == Xcor2){
+        document.getElementById("answer2").innerHTML = "The equation of the line is: x = " + Xcor1;
     }
     event.preventDefault();
 }
