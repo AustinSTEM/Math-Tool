@@ -10,7 +10,12 @@ function EquationSolver() {
         document.getElementById("answer").innerHTML = "The equation of the line is: y = " + b;
     }
     else {document.getElementById("answer").innerHTML = "The equation of the line is: y = " + Slope + "x + " + b;
-}
+    calculator.setExpression({ id: 'answer',
+    latex: "y = " + Slope + "x + " + b
+    
+    });
+    }
+
     // alert("The equation of the parabola is: y = " + Slope + "x + " + b);
     event.preventDefault();
 }
@@ -27,7 +32,7 @@ function EquationSolver2() {
     }
     else{ 
         if (b>0){
-            document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x " + b;
+            document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x  + " + b;
         }
         if (b==0){    
             document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x";
@@ -35,12 +40,16 @@ function EquationSolver2() {
         if (b<0){    
             document.getElementById("answer2").innerHTML = "The equation of the line is: y = " + Slope2 + "x - " + Math.abs(b);
         }
-    }
+        };
+    calculator.setExpression({ id: 'answer2',
+    latex: "y = " + Slope2 + "x + " + b    
+    });
     inputs();
     // alert("The equation of the parabola is: y = " + Slope + "x + " + b);
     e.preventDefault();
+    };
 
-}
+
 
 function inputs(){
     var Xcor = document.forms['info']['Xcor'].value;
@@ -57,4 +66,7 @@ function inputs(){
         document.getElementById("answer2").innerHTML = "The equation of the line is: x = " + Xcor1;
     }
     event.preventDefault();
-}
+
+};
+
+
